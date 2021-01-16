@@ -1,0 +1,270 @@
+body.default-theme {
+    --main-bg-color: #ffffff;
+    --secondary-bg-color: #808080;
+    --main-text-color: #000000;
+    --secondary-text-color: #757575;
+
+    --btn-color: #3490dc;
+    --shadow-color: #888888;
+    --bg-navbar: #2E86DE;
+    --bg-wave: #0099ff;
+
+    background-color: #F4F6F9;
+    transition: 0.25s;
+}
+
+body.dark-theme {
+    --main-bg-color: #111013;
+    --secondary-bg-color: #212121;
+    --main-text-color: #ffffff;
+    --secondary-text-color: #fafafa;
+
+    --shadow-color: #343a40;
+    --bg-navbar: #2E86DE;
+    --bg-wave: #0a3d62;
+    --btn-color: #d81e1e;
+
+    background-color: #0b0913;
+    transition: 0.25s;
+    /* color: #de512e; */
+}
+
+/* Sidebar */
+
+div#sidebar {
+    float: left;
+    width: 20%;
+    height: 120%;
+    /* position: sticky; */
+  /* z-index: 1; */
+  /* top: 0;
+  left: 0; */
+
+  /* margin-right: 100px; */
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    box-shadow: 2px 2px 10px var(--shadow-color);
+    transition: 0.5s;
+}
+
+div#sidebar header a {
+    text-decoration: none;
+}
+
+div#sidebar header h2#VeCoHeader {
+    display: block;
+}
+
+div#sidebar header img#VeCoLogo {
+    width: 20%;
+}
+
+div#sidebar header strong {
+    color: var(--main-text-color)
+}
+
+div#sidebar hr {
+    width: 90%;
+    background-color: var(--main-text-color);
+    margin-top: 17.5px;
+    margin-bottom: 30px;
+}
+
+div#sidebar ul {
+    margin-left: -40px;
+}
+
+div#sidebar ul a,
+div#sidebar ul span {
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+div#sidebar ul span i.fa.fa-chevron-right {
+    font-size: 10px;
+    margin-top: 10px;
+    float: right;
+    transition: 0.25s;
+    display: inline-block;
+}
+
+div#sidebar ul li {
+    list-style: none;
+    padding: 15px 0px;
+    color: var(--main-text-color);
+}
+
+div#sidebar ul li i#iconDashboard {
+    font-size: 20px;
+    margin-left: 0;
+}
+
+div#sidebar ul li i#iconCompanyProfile {
+    font-size: 20px;
+    margin-left: 0;
+}
+
+div#sidebar ul li i#iconTeam {
+    font-size: 20px;
+    margin-left: 0;
+}
+
+div#sidebar ul li i#iconJobs {
+    font-size: 20px;
+    margin-left: 0;
+}
+
+div#sidebar ul li i#iconActivity {
+    font-size: 20px;
+    margin-left: 0;
+}
+
+div#sidebar span#dashboardTitle {
+    display: inline-block;
+}
+
+div#sidebar span#companyProfileTitle {
+    display: inline-block;
+}
+
+div#sidebar span#teamTitle {
+    display: inline-block;
+}
+
+div#sidebar span#jobsTitle {
+    display: inline-block;
+}
+
+div#sidebar span#activityTitle {
+    display: inline-block;
+}
+
+div#sidebar ul li i:hover li,
+div#sidebar ul a:hover li,
+div#sidebar ul span:hover li,
+div#sidebar #jobsMenus a:hover li,
+div#sidebar #activityMenus a:hover li,
+div#sidebar #teamMenus a:hover li
+
+{
+    color: #2E86DE;
+}
+
+div#sidebar ul#teamMenus {
+    display: none;
+}
+
+div#sidebar ul#jobsMenus {
+    display: none;
+}
+
+div#sidebar ul#activityMenus {
+    display: none;
+}
+
+div#sidebar ul#teamMenus a,
+div#sidebar ul#jobsMenus a,
+div#sidebar ul#activityMenus a {
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+div#sidebar ul#teamMenus li,
+div#sidebar ul#jobsMenus li,
+div#sidebar ul#activityMenus li {
+    list-style: none;
+    padding: 10px;
+    color: var(--main-text-color);
+    margin-left: 70px;
+}
+
+div#sidebar p#reserved {
+    color: var(--main-text-color);
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    left: 23px;
+    transition: 0.5s;
+    display: block;
+}
+
+/* Navbar */
+
+nav.navbar {
+    float: left;
+    background-color: var(--bg-navbar);
+    width: 80%;
+    z-index: 1000;
+}
+
+nav.navbar img#photo {
+    float: right;
+    width: 37.5px;
+    height: 35px;
+    cursor: pointer;
+}
+
+/* Icon Theme Toggler */
+
+div#theme-toggler {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  background-color: #2E86DE;
+  border-radius: 50px;
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+div#theme-toggler i {
+    margin-top: 5px;
+}
+
+/* Profile Tooltip Box */
+
+div#profileBox {
+    display: none;
+    text-align: center;
+    position: fixed;
+    top: 56px;
+    right: 20px;
+    width: 120px;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 1000;
+}
+
+div#profileBox::after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid var(--main-bg-color);
+    border-left: 10px solid transparent;
+    position: fixed;
+    top: 47.5px;
+    right: 38px;
+}
+
+div#profileBox hr {
+    border-color: var(--main-text-color);
+    margin-top: 10px;
+}
+
+div#profileBox a {
+    color: var(--main-text-color);
+    text-decoration: none;
+    font-size: 15px;
+    margin-top: 0px;
+}
